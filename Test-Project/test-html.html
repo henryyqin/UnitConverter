@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Tab Title</title>
 </head>
+<title>Unit Converter</title>
 <body>
-	
+	<h2>Feet to Meters</h2>
+
+	<p>
+		<label>Feet:</label>
+		<input id=inputFeet" type="number" placeholder="Feet" oninput="FeetToMeters(this.value)" onchange="FeetToMeters(this.value)">
+	</p>
+
+	<p>
+		Meters: <span id="outputMeters"></span>
+	</p>
+
+	<script>
+		function FeetToMeters(valNum) {
+			document.getElementById("outputMeters").innerHTML=valNum/3.281;
+		}
+	</script>
+
 </body>
 </html>
