@@ -6,20 +6,29 @@
 </head>
 <title>Unit Converter</title>
 <body>
-	<h2>Feet to Meters</h2>
+	<h2>Unit Converter</h2>
 
 	<p>
-		<label>Feet:</label>
-		<input id="inputFeet" type="number" placeholder="Feet" oninput="FeetToMeters(this.value)" onchange="FeetToMeters(this.value)">
+		<label>Input:</label>
+		<input id="input" type="number" placeholder="input" oninput="getInput(this.value)" onchange="getInput(this.value)">
 	</p>
+	
+
+	<button type="button" onclick="FeetToMeters(x)">Feet To Meters</button>
 
 	<p>
-		Meters: <span id="outputMeters"></span>
+		Output: <span id="output"></span>
 	</p>
 
 	<script>
+		var x;
+
+		function getInput(num) {
+			x = num;
+		}
+
 		function FeetToMeters(valNum) {
-			document.getElementById("outputMeters").innerHTML=valNum/3.281;
+			document.getElementById("output").innerHTML=valNum/3.281;
 		}
 	</script>
 
