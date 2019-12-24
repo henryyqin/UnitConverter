@@ -10,19 +10,26 @@
 	<h2>Feet to Meters</h2>
 
 	<p>
-		<label>Feet:</label>
-		<input id="inputFeet" type="number" placeholder="Feet" oninput="FeetToMeters(this.value)" onchange="FeetToMeters(this.value)">
+		<label>Input:</label>
+		<input id="inputNum" type="number" placeholder="Number" oninput="getInput(this.value)" onchange="getInput(this.value)">
 	</p>
-
+	<div>
+		<button onclick = "FeetToMeters(x)">Feet to Meters</button>
+	</div>
 	<p>
-		Meters: <span id="outputMeters"></span>
+		Meters: <span id="outputNum"></span>
 	</p>
 
 	<script>
+		var x;
+		function getInput(num){
+			x = num;
+		}
 		function FeetToMeters(valNum) {
-			document.getElementById("outputMeters").innerHTML=valNum/3.281;
+			document.getElementById("outputNum").innerHTML=valNum/3.281;
 		}
 	</script>
+
 
 </body>
 </html>
