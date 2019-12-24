@@ -2,33 +2,45 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Tab Title</title>
+	<title>UnitConverter</title>
 </head>
 <title>Unit Converter</title>
 <body>
-	<h2>Unit Converter</h2>
-	<h1>Testing</h1>
-	<h2>Feet to Meters</h2>
+	<h1>Unit Converter</h1>
+	<p>Enter a number, click a button, and convert!</p>
 
 	<p>
 		<label>Input:</label>
 		<input id="input" type="number" placeholder="Number" oninput="getInput(this.value)" onchange="getInput(this.value)">
 	</p>
 	<div>
+		<h3>SI Units to Metric Units!</h3>
 		<button onclick = "FeetToMeters(x)">Feet to Meters</button>
+		<button onclick = "YardsToMeters(x)">Yards to Meters</button>
+		<button onclick = "InchesToCentimeters(x)">Inches to Centimeters</button>
+		<button onclick = "MilesToKilometers(x)">Miles to Kilometers</button>
 	</div>
-
+	
 	<p>
-		Output: <span id="output"></span>
+		Results: <span id="output"></span>
 	</p>
 
 	<script>
 		var x;
 		function getInput(num){
-			x = num;
+			x = num
 		}
 		function FeetToMeters(valNum) {
 			document.getElementById("output").innerHTML=valNum/3.281;
+		}
+		function YardsToMeters(valNum) {
+			document.getElementById("output").innerHTML=valNum/1.094;
+		}
+		function InchesToCentimeters(valNum){
+			document.getElementById("output").innerHTML=valNum/0.3937;
+		}
+		function MilesToKilometers(valNum){
+			document.getElementById("output").innerHTML=valNum*1.60934;
 		}
 	</script>
 
