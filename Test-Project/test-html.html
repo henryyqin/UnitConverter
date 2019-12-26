@@ -15,10 +15,10 @@
 	</p>
 	<div>
 		<h3>SI Units to Metric Units!</h3>
-		<button onclick = "FeetToMeters(x)">Feet to Meters</button>
-		<button onclick = "YardsToMeters(x)">Yards to Meters</button>
-		<button onclick = "InchesToCentimeters(x)">Inches to Centimeters</button>
-		<button onclick = "MilesToKilometers(x)">Miles to Kilometers</button>
+		<button onclick = "convert(x, 0.30479)">Feet to Meters</button>
+		<button onclick = "convert(x, 0.91408)">Yards to Meters</button>
+		<button onclick = "convert(x, 2.54)">Inches to Centimeters</button>
+		<button onclick = "convert(x, 1.60934)">Miles to Kilometers</button>
 	</div>
 	
 	<p>
@@ -30,17 +30,8 @@
 		function getInput(num){
 			x = num
 		}
-		function FeetToMeters(valNum) {
-			document.getElementById("output").innerHTML=valNum/3.281;
-		}
-		function YardsToMeters(valNum) {
-			document.getElementById("output").innerHTML=valNum/1.094;
-		}
-		function InchesToCentimeters(valNum){
-			document.getElementById("output").innerHTML=valNum/0.3937;
-		}
-		function MilesToKilometers(valNum){
-			document.getElementById("output").innerHTML=valNum*1.60934;
+		function convert(inputVal, factor) {
+			document.getElementById("output").innerHTML = inputVal * factor
 		}
 	</script>
 
