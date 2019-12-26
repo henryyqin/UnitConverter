@@ -10,20 +10,52 @@
 	<p>Enter a number, click a button, and convert!</p>
 
 	<p>
-		<label>Input:</label>
-		<input id="input" type="number" placeholder="Number" oninput="getInput(this.value)" onchange="getInput(this.value)">
+		<input id="input" type="number" placeholder="Enter a Number" oninput="getInput(this.value)" onchange="getInput(this.value)">
 	</p>
+
+	<p>
+		Converted: <span id="output"></span>
+	</p>
+
 	<div>
-		<h3>SI Units to Metric Units!</h3>
+		<h3>Imperial Units to Metric Units!</h3>
+
+		<h4>Length Converter</h4>
+
 		<button onclick = "convert(x, 0.30479)">Feet to Meters</button>
 		<button onclick = "convert(x, 0.91408)">Yards to Meters</button>
 		<button onclick = "convert(x, 2.54)">Inches to Centimeters</button>
 		<button onclick = "convert(x, 1.60934)">Miles to Kilometers</button>
+		<br>
+		<button onclick = "convert(x, 1/0.30479)">Meters to Feet</button>
+		<button onclick = "convert(x, 1/0.91408)">Meters to Yards</button>
+		<button onclick = "convert(x, 1/2.54)">Centimeters to Inches</button>
+		<button onclick = "convert(x, 1/1.60934)">Kilometers to Miles</button>
+
+		<h4>Mass Converter</h4>
+
+		<button onclick = "convert(x, 28.35)">Ounces to Grams</button>
+		<button onclick = "convert(x, 1/2.205)">Pounds to Kilograms</button>
+		<button onclick = "convert(x, 6.35)">Stones to Kilograms</button>
+		<button onclick = "convert(x, 907.185)">US tons to Kilograms</button>
+		<button onclick = "convert(x, 1/1.1023)">US tons to Metric Tons</button>
+		<br>
+		<button onclick = "convert(x, 1/28.35)">Grams to Ounces</button>
+		<button onclick = "convert(x, 2.205)">Kilograms to Pounds</button>
+		<button onclick = "convert(x, 1/6.35)">Kilograms to Stones</button>
+		<button onclick = "convert(x, 1/907.185)">Kilograms to US tons</button>
+		<button onclick = "convert(x, 1.1023)">Metric Tons to US tons</button>
+
+		<h4>Temperature Converter</h4>
+
+		<button onclick = "FtoC(x)">Fahrenheit to Celsius</button>
+		<button onclick = "FtoK(x)">Fahrenheit to Kelvin</button>
+		<button onclick = "CtoK(x)">Celsius to Kelvin</button>
+		<br>
+		<button onclick = "CtoF(x)">Celsius to Fahrenheit</button>
+		<button onclick = "KtoF(x)">Kelvin to Fahrenheit</button>
+		<button onclick = "KtoC(x)">Kelvin to Celsius</button>
 	</div>
-	
-	<p>
-		Results: <span id="output"></span>
-	</p>
 
 	<script>
 		var x;
@@ -31,7 +63,25 @@
 			x = num
 		}
 		function convert(inputVal, factor) {
-			document.getElementById("output").innerHTML = inputVal * factor
+			document.getElementById("output").innerHTML = (inputVal * factor).toFixed(4)
+		}
+		function FtoC(inputVal) {
+			document.getElementById("output").innerHTML = ((inputVal - 32) * (5/9)).toFixed(4)
+		}
+		function CtoF(inputVal) {
+			document.getElementById("output").innerHTML = ((inputVal * (9/5)) + 32).toFixed(4)
+		}
+		function FtoK(inputVal) {
+			document.getElementById("output").innerHTML = (FtoC(inputVal) + 273.15).toFixed(4)
+		}
+		function KtoF(inputVal) {
+			document.getElementById("output").innerHTML = (CtoF(inputVal - 273.15)).toFixed(4)
+		}
+		function CtoK(inputVal) {
+			document.getElementById("output").innerHTML = (inputVal + 273.15).toFixed(4)
+		}
+		function KtoC(inputVal) {
+			document.getElementById("output").innerHTML = (inputVal - 273.15).toFixed(4)
 		}
 	</script>
 
