@@ -7,12 +7,14 @@ p {
 	font-size: 20px;
 }
 
+body {
+	background-color: lightgray;
+}
+
 div{
 	background-color: lightgray;
 }
-.lightgray{
-	background-color: lightgray;
-}
+
 .lightblue{
 	background-color: lightblue;
 }
