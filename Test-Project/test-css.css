@@ -17,7 +17,7 @@ div{
 	background-color: lightblue;
 }
 button {
-  background-color: #5CB3FF;
+  background-color: white;
   border: none;
   color: black;
   padding: 6px 12px;
@@ -34,6 +34,13 @@ input {
   padding: 5px 10px;
   margin: 8px 0;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
+  font-family: Arial;
+}
+
+span {
+	text-align: center;
+	font-size: 28px;
+	font-family: Arial;
 }
