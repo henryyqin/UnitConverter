@@ -1,3 +1,12 @@
 h1, h3, title, p, div.buttons {
 	text-align: center;
 }
+div{
+	background-color: lightgray;
+}
+.lightgray{
+	background-color: lightgray;
+}
+.lightblue{
+	background-color: lightblue;
+}
