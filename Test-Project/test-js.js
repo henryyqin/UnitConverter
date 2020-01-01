@@ -3,7 +3,7 @@ function getInput(num){
 	x = num
 }
 // General conversion function
-function convert(inputVal, factor) {
+function convert(inputVal=0, factor=0) {
 	document.getElementById("output").innerHTML = (inputVal * factor).toFixed(4)
 }
 // Temperature conversion functions
