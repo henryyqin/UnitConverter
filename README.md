@@ -1,5 +1,4 @@
 # UnitConverter
-January 5th, 2020
 Project by Henry Qin and Mateo Martinez, Rice University c/o 2023
 
 How to Run:
