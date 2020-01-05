@@ -5,9 +5,11 @@ January 5th, 2020
 
 This unit converter converts Imperial units to Metric units and vice versa. The conversions are categorized into length, mass, and temperature.
 
-Imperial units include: feet, yards, inches, miles, ounces, pounds, stones, US tons, Fahrenheit.
+  Imperial units include:
+    Feet, Yards, Inches, Miles, Ounces, Pounds, Stones, US Tons, Fahrenheit.
 
-Metric units include: meters, centimeters, kilometers, grams, kilograms, metric tons, Celsius, kelvin.
+  Metric units include:
+    Meters, Centimeters, Kilometers, Grams, Kilograms, Metric Tons, Celsius, Kelvin.
 
 How to Run:
   1. Clone repository.
